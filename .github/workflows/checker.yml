@@ -6,7 +6,7 @@ on:
 
 jobs:
   hw-checker:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
 
@@ -33,4 +33,5 @@ jobs:
         uses: zhangt2333/action-judger@main
         with:
           script: |
+
             python main.py "${{ github.event.issue.body }}"
